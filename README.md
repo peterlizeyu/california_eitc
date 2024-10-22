@@ -8,33 +8,30 @@ This repository contains the code and data used in our paper _"Too Much of a Goo
 - **Master Do-File**: `master.do`  
   This is the main script that calls the sub-do files and reproduces all the results and figures presented in the paper. It coordinates data import, processing, analysis, and graph generation.
   
-- **Sub Do-Files**:
-  - `analysis_figure_1.do`: Generates Figure 1, which compares the income-credit relationships for the federal EITC, California’s EITC, and the combined effect. It uses data from `eitc_credit_federal_ca.xlsx`.
-  - `analysis_figure_2.do`: Produces Figure 2, an event study that visualizes the employment effects over time in California compared to states without EITC supplements, using data from `analysis_6.dta`.
-  
-- **Data**:
-  - `eitc_credit_federal_ca.xlsx`: Contains raw data on federal and California EITC credits, used for generating the income-credit relationship plots.
-  - `state_eitc_pctg_dt.dta`: Dataset that provides state-level EITC percentages used in the event studies.
-  - `analysis_6.dta`: Processed dataset used in the event studies for Figure 2, which includes employment, hours worked, and other demographic variables.
+## Data
 
-## Output Files
+- **CPS** All CPS data are from IPUMS (https://cps.ipums.org/cps/) and are not included in this repository.
+- 
+- **`stateeitcdn.xls`, `eitc_credit_federal_ca.xlsx`, and `state_eitc_pctg.xlsx` **  
+  Contains historical data on federal and state EITC implementation, including the date each state introduced its EITC and the basic parameters of each program. These data is crucial for understanding policy variation across states.
 
-- **Figures**:
-  - `figures/credit_fed.jpg`: Federal EITC income-credit graph.
-  - `figures/credit_ca.jpg`: California EITC income-credit graph.
-  - `figures/credit_sum.jpg`: Combined federal and California EITC graph.
-  - `figures/emp_yr.jpg`: Event study graph for employment effects over time.
+- **`ur_cps.xls`**  
+  Contains state-level unemployment rate data that is merged with CPS data to control for business-cycle effects by state and year.
+
 
 ## How to Run the Code
 1. Clone this repository:
    ```bash
    git clone https://github.com/peterlizeyu/california_eitc.git
-   '''
+
+2. Update directory paths:
+
+Before running the code, open the master.do file in Stata or a text editor and update the global directory variables dir and data_dir to reflect the paths where you have saved the repository on your local machine. This ensures the code runs correctly on your setup.
 
 2. Open Stata and run the master do-file:
    ```bash
    do master.do
-   '''
+   
 This will generate all results and figures in the outfiles directory.
 
 If you use this repository or data, please cite the paper:
