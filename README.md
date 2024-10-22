@@ -12,7 +12,7 @@ This repository contains the code and data used in our paper _"Too Much of a Goo
 
 - **CPS** All CPS data are from IPUMS (https://cps.ipums.org/cps/) and are not included in this repository.
 - 
-- **`stateeitcdn.xls`, `eitc_credit_federal_ca.xlsx`, and `state_eitc_pctg.xlsx` **  
+- **`stateeitcdn.xls`**, **`eitc_credit_federal_ca.xlsx`**, and **`state_eitc_pctg.xlsx`**  
   Contains historical data on federal and state EITC implementation, including the date each state introduced its EITC and the basic parameters of each program. These data is crucial for understanding policy variation across states.
 
 - **`ur_cps.xls`**  
